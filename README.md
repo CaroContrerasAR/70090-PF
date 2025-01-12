@@ -16,6 +16,8 @@ Este proyecto es parte de la aplicación **Adoptme** creada por Carolina Contrer
 - **jsonwebtoken**: Librería para generar y verificar tokens JWT para autenticación.
 - **mongoose**: ODM para MongoDB en Node.js.
 - **multer**: Middleware para manejo de archivos (subida de archivos).
+- **swagger-jsdoc**: Librería para generar documentación de API en formato OpenAPI (Swagger) a partir de comentarios en el código.
+- **swagger-ui-express**: Middleware para servir la interfaz gráfica de Swagger UI y explorar la documentación de tu API.
 
 
 ### Dependencias de Desarrollo

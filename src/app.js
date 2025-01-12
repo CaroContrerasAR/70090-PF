@@ -11,11 +11,28 @@ import sessionsRouter from './routes/sessions.router.js';
 //importamos el nuevo router:
 import mocksRouter from './routes/mocks.router.js'
 
+import swaggerJSDoc from 'swagger-jsdoc'
+import swaggerUiExpress from 'swagger-ui-express'
+
 dotenv.config()
 const app = express();
 const PORT = process.env.PORT||8080;
 
 const connection = mongoose.connect(process.env.MONGO_URL)
+const swaggerOptions = {
+    definition:{
+        openapi: '3.0.1',
+        info: {
+            title: 'Documentacion de la App Adoptame',
+            description: 'Api de adopcion de mascotas'
+        }
+    },
+    apis: ['./src/docs/**/*.yaml']
+}
+
+const specs = swaggerJSDoc(swaggerOptions)
+
+app.use('/apidocs', swaggerUiExpress.serve, swaggerUiExpress.setup(specs))
 
 app.use(express.json());
 app.use(cookieParser());
