@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Este proyecto es parte de la aplicación **Adoptme** creada por Carolina Contreras. Se utiliza para gestionar usuarios y mascotas mediante una serie de endpoints para generar datos de prueba y almacenarlos en una base de datos MongoDB. Este proyecto hace uso de varias tecnologías modernas para el desarrollo de aplicaciones backend.
+Este proyecto es parte de la aplicación **Adoptme** creada por Carolina Contreras. Es una API para gestionar adopciones de mascotas. Permite a los usuarios adoptar mascotas y gestionar sus adopciones.
 
 ## Tecnologías Utilizadas
 
@@ -11,24 +11,26 @@ Este proyecto es parte de la aplicación **Adoptme** creada por Carolina Contrer
 - **@faker-js/faker**: Librería para generar datos falsos (mocking).
 - **bcrypt**: Librería para encriptar contraseñas de usuarios.
 - **cookie-parser**: Middleware para analizar cookies en solicitudes HTTP.
+- **dotenv**: Librería para cargar variables de entorno desde un archivo `.env` al entorno de ejecución.
 - **express**: Framework web para Node.js.
 - **jsonwebtoken**: Librería para generar y verificar tokens JWT para autenticación.
 - **mongoose**: ODM para MongoDB en Node.js.
 - **multer**: Middleware para manejo de archivos (subida de archivos).
-- **supertest**: Herramienta para pruebas HTTP de integración.
+
 
 ### Dependencias de Desarrollo
 
 - **chai**: Librería para aserciones en pruebas.
 - **mocha**: Framework de pruebas para JavaScript.
 - **nodemon**: Herramienta que reinicia el servidor automáticamente durante el desarrollo.
+- **supertest**: Herramienta para pruebas HTTP de integración.
 
 ## Instalación
 
 1. Clona el repositorio:
 
-   git clone <repositorio_url>
-   cd <nombre_del_proyecto>
+   git clone <https://github.com/CaroContrerasAR/70090-PF.git>
+   cd <70090-PF>
 
 2. Instala las dependencias:
     npm install
@@ -45,6 +47,14 @@ npm start
 
 npm run dev
 
+- **userTest**: Ejecuta las pruebas definidas en el archivo test/user.test.js.
+
+npm run userTest
+
+- **usersChai**: Ejecuta las pruebas definidas en el archivo test/usersChai.test.js.
+
+npm run usersChai
+
 - **test**: Ejecuta las pruebas definidas en el archivo test/supertest.test.js.
 
 npm run test
@@ -57,7 +67,7 @@ npm run test
 -   **Imagen Publica en DockerHub:**\
 <https://hub.docker.com/repository/docker/carocontrerasar/70090-pf/general>
 
-## Endpoints
+## Endpoints de Pre-Entrega
 El proyecto tiene los siguientes endpoints bajo la ruta base /api/mocks:
 
 1. GET /api/mocks/mockingusers
