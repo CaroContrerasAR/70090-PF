@@ -32,6 +32,7 @@ Este proyecto es parte de la aplicación **Adoptme** creada por Carolina Contrer
 1. Clona el repositorio:
 
    git clone <https://github.com/CaroContrerasAR/70090-PF.git>
+   
    cd <70090-PF>
 
 2. Instala las dependencias:
@@ -60,6 +61,9 @@ npm run usersChai
 - **test**: Ejecuta las pruebas definidas en el archivo test/supertest.test.js.
 
 npm run test
+
+## Documentación de la API
+La documentación de la API está disponible en http://localhost:8080/apidocs una vez que el servidor esté en funcionamiento. Esta documentación está generada con Swagger.
 
 ## Perfil y Recursos en DockerHub
 -   **Perfil DockerHub:**\

@@ -1,7 +1,11 @@
 import supertest from 'supertest';
 import { expect } from 'chai';
+import {config} from 'dotenv'
 
-const requester = supertest('http://localhost:8080');
+config()
+const PORT = process.env.PORT
+
+const requester = supertest(`http://localhost:${PORT}`);
 
 
 describe('Testing de la App Web Adoptme - Router de Adopciones', () => {
@@ -17,7 +21,7 @@ describe('Testing de la App Web Adoptme - Router de Adopciones', () => {
 
         it('endpoint GET /api/adoptions/:aid debe devolver una adopción específica', async () => {
             // Mock ID de adopción (asegúrate de reemplazar esto con un ID válido en tu base de datos)
-            const mockAdoptionId = '64df12efc0a4f4e3a1234567';
+            const mockAdoptionId = '67466bcd2684c31f4b636c8a';
 
             const { statusCode, body } = await requester.get(`/api/adoptions/${mockAdoptionId}`);
 
@@ -29,8 +33,8 @@ describe('Testing de la App Web Adoptme - Router de Adopciones', () => {
 
         it('endpoint POST /api/adoptions/:uid/:pid debe crear una adopción correctamente', async () => {
             // Mock de usuario y mascota
-            const mockUserId = '64df12efc0a4f4e3a1234568';
-            const mockPetId = '64df12efc0a4f4e3a1234569';
+            const mockUserId = '67466b982684c31f4b636c9f';
+            const mockPetId = '67466e696af7f25bb4ce5a47';
 
             const mockAdoption = {
                 adoptionDate: '2025-01-01',
